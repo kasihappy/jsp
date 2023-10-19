@@ -1,0 +1,77 @@
+<!--ant 使用的build.xml-->
+<project name="ant-jar-demo" default="main" basedir=".">
+    <!-- 设置源代码的存储位置属性-->
+    <property name="src" value="./src"/>
+    <property name="src.conf"   value="${src}/conf"/>
+    <property name="src.java"   value="${src}/java"/>
+    <!-- 设置工作文件的存储位置属性-->
+    <property name="build"  value="./build"/>
+    <property name="build.classes"  value="${build}/classes"/>
+    <property name="build.assemble" value="${build}/assemble"/>
+    <property name="build.assemble.jar" value ="${build}/assemble/jar"/>
+    <!-- 设置构建时所使用的classespath属性-->
+    <property name="build.classespath"  value="${build}/classes:."/>
+    <!-- 设置jar文件中运行主类属性的文件-->
+    <property file="${src.conf}/common.properties"/>
+    <!-- 设置所生成的jar文件属性-->
+    <property name="binary.name"    value="${ant.project.name}.jar"/>
+    <!-- 任务1 删除组装目录 clean_build-->
+    <target name="clean_build">
+        <delete dir="${build}"/>
+    </target>
+    <!-- 任务2 初始化操作 init_common-->
+    <target name="init_common">
+        <echo message="初始设置"/>
+    </target>
+    <!-- 任务3 mkdir_jar-->
+    <target name="mkdir_jar">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${build.classes}"/>
+        <mkdir dir="${build.assemble}"/>
+        <mkdir dir="${build.assemble.jar}"/>
+
+    </target>
+    <!-- 任务4 compile_common-->
+    <target name="compile_common">
+        <echo message="Compiling source files into ${build.classes}"/>
+        <javac srcdir ="${src.java}"
+        destdir="${build.classes}"
+        classpath="${build.classpath}"
+        includeantruntime="false"/>
+
+    </target>
+    <!-- 任务5 add_classes_to_jar-->
+    <target name="add_classes_to_jar">
+        <jar destfile="${build.assemble.jar}/${binary.name}" update="true">
+            <zipfileset dir="${build.classes}/" includes="**/*.class"/>
+            <manifest>
+                <attribute name="Main-Class" value="${ant-jar-demo-main-class}"/>
+            </manifest>
+        </jar>
+
+    </target>
+    <!--  任务6 copy_appclientjar拷贝jar文件到当前目录-->
+    <target name="copy_jarfile">
+        <copy file="${build.assemble.jar}/${binary.name}"   todir="."/>
+
+    </target>
+    <!-- 任务7 建立客户端 jar_create_appclientjar-->
+    <target name="create_appclientjar" depends="clean_build,init_common,mkdir_jar,compile_common,add_classes_to_jar,copy_jarfile">
+        <echo message="开始建立jar文件"/>
+
+
+    </target>
+    <!-- project tagets定义-->
+    <target name="clean" depends="clean_build"/>
+    <target name="compile" depends="mkdir_jar,compile_common"/>
+    <target name="getjar" depends="create_appclientjar"/>
+
+    <target name="main" depends="getjar"/>
+    <!-- 通过ant运行main-class-->
+    <target name="run">
+        <java jar="./${binary.name}" fork="true"/>
+    </target>
+
+
+
+</project>

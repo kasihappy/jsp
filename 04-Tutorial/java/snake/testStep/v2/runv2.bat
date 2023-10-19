@@ -1,0 +1,1 @@
+java -cp ..\..\target\snake.jar org.kasihappy.Tutorial.java.snake.components.v2.testGame_v2

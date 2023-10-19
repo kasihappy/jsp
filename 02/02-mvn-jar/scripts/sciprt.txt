@@ -1,0 +1,16 @@
+mvn命令清单:
+mvn archetype:生成一个Maven项目结构
+mvn install:install-file:增加jar文件到local repository
+mvn package:生成.jar或者.war文件
+mvn clean:清理工作空间
+mcn install:增加到local repository
+
+
+执行:
+java -cp name.jar
+java -cp target\name.jar
+
+mvn clean package
+java -jar target\prime.jar
+
+mvn clean -Dtest=AppTest1 test

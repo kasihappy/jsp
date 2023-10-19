@@ -1,0 +1,5 @@
+jar cvf name.jar dir\*.class
+java -cp name.jar dir.***
+
+jar cvfm HW8.jar mainfest.mf lianxi\*.class
+定义mainfest.mf之后就可以java -jar name.jar
