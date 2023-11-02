@@ -15,6 +15,7 @@
     <modules>
         <module>prime</module>
         <module>snake</module>
+        <module>network</module>
     </modules>
 
 </project>

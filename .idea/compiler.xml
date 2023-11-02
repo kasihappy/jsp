@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="snake" />
+        <module name="prime" />
         <module name="scripts" />
         <module name="jarTest" />
+        <module name="network" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Tutorial" options="-Xlint:unchecked" />
       <module name="java" options="-Xlint:unchecked" />
+      <module name="network" options="-Xlint:unchecked" />
       <module name="prime" options="-Xlint:unchecked" />
       <module name="prime (1)" options="-Xlint:unchecked" />
       <module name="snake" options="-Xlint:unchecked" />

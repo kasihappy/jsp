@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.kasihappy.Tutorial.AppTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.kasihappy.Tutorial.AppTest" time="0.009" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\prime\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\prime\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\network\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\network\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.4\bin"/>
-    <property name="sun.java.command" value="C:\Users\17143\AppData\Local\Temp\surefire6427592849810178995\surefirebooter-20231026204011034_3.jar C:\Users\17143\AppData\Local\Temp\surefire6427592849810178995 2023-10-26T20-40-10_944-jvmRun1 surefire-20231026204011034_1tmp surefire_0-20231026204011034_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\17143\AppData\Local\Temp\surefire1906225262965652708\surefirebooter-20231026204012403_9.jar C:\Users\17143\AppData\Local\Temp\surefire1906225262965652708 2023-10-26T20-40-10_944-jvmRun1 surefire-20231026204012403_7tmp surefire_2-20231026204012403_8tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\prime\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\prime\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\network\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\network\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\17143"/>
     <property name="user.language" value="zh"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2022-07-19"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17.0.4"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\prime"/>
+    <property name="basedir" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\network"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\17143\AppData\Local\Temp\surefire6427592849810178995\surefirebooter-20231026204011034_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\17143\AppData\Local\Temp\surefire1906225262965652708\surefirebooter-20231026204012403_9.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.4+11-LTS-179"/>
@@ -45,7 +45,7 @@
     <property name="java.io.tmpdir" value="C:\Users\17143\AppData\Local\Temp\"/>
     <property name="idea.version" value="2023.2.2"/>
     <property name="java.version" value="17.0.4"/>
-    <property name="user.dir" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\prime"/>
+    <property name="user.dir" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\network"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -57,5 +57,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testApp" classname="org.kasihappy.Tutorial.AppTest" time="0.002"/>
+  <testcase name="testApp" classname="org.kasihappy.Tutorial.AppTest" time="0.001"/>
 </testsuite>
