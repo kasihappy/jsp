@@ -8,14 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="snake" />
         <module name="prime" />
-        <module name="scripts" />
-        <module name="jarTest" />
+        <module name="web" />
         <module name="network" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jarTest" target="1.7" />
       <module name="prime (1)" target="1.8" />
       <module name="prime (2)" target="1.5" />
+      <module name="scripts" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

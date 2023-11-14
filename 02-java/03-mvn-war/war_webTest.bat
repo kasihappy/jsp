@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=org.kasihappy.Tutorial -DartifactId=web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
