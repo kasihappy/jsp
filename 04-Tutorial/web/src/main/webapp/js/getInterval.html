@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>演示停留页面时间</title>
+</head>
+<body bgcolor="white">
+<form name="myform">
+    您在此停留了
+    <input name="clock" value="在线时间" size="20">
+</form>
+<script>
+    var id, iM = 0, iS = 1;
+    start = new Date();
+    function go(){
+        now = new Date();
+        time = (now.getTime() - start.getTime()) / 1000;
+        time = Math.floor(time);
+        iS = time % 60;
+        iM = Math.floor(time / 60);
+        if (iS < 10)
+            document.myform.clock.value = " "+iM+"分0"+iS+"秒";
+        else
+            document.myform.clock.value = " "+iM+"分"+iS+"秒";
+        id = setTimeout("go()", 1000);
+    }
+    go();
+</script>
+<p><a href="index.html">返回</a></p>
+</body>
+</html>

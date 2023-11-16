@@ -1,0 +1,106 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>对象事件</title>
+    <script>
+        function validate_form() {
+            validity = true;
+            if (!check_empty(document.form.name.value)) {
+                validity = false;
+                alert('没有填写姓名!');
+            }
+            if (!check_email(document.form.email.value)) {
+                validity = false;
+                alert('email地址错误');
+            }
+            if (!check_empty(document.form.description.value)) {
+                validity = false;
+                alert('缺少说明！');
+            }
+            if (validity)
+                alert("通过全部验证，开始进一步处理...");
+            return validity;
+        }
+        function check_empty(text) {
+            if (text.length > 0)
+                return true;
+            return false;
+        }
+        function check_email(address) {
+            if ((address == "") || (address.indexOf('@') == -1))
+                return false;
+            return true;
+        }
+        function checkname() {
+            if (document.form.name.value == "ruc")
+                alert("您输入了ruc");
+        }
+        function echoname() {
+            alert("开始关注 姓名 ...");
+        }
+    </script>
+</head>
+<body>
+<br>
+<p align="center">
+    <img border="0" src="../resources/images/1.gif">
+</p>
+<h2>欢迎光临本网站，注册页面</h2>
+<p>
+    <a href="index.html">返回</a>
+</p>
+<hr>
+<form method="post" action="" enctype="multipart/form-data">
+    <p>姓名：<input type="text" name="name"></p>
+    <p>邮件地址：<input type="text" name="mail"></p>
+    <p>性别：男<input type="radio" name="radiobutton" value="radiobutton">
+        性别：女<input type="radio" name="radiobutton" value="radiobutton">
+    </p>
+    <p>爱好：
+        <input  type="checkbox"
+                name="checkbox"
+                value="checkbox">计算机
+        <input  type="checkbox"
+                name="checkbox2"
+                value="checkbox">体育
+        <input  type="checkbox"
+                name="checkbox3"
+                value="checkbox">文艺
+        <input  type="checkbox"
+                name="checkbox4"
+                value="checkbox">沙龙
+    </p>
+    <p>说明：
+        <textarea name="textfield" rows="5" cols="30"></textarea>
+    </p>
+    <p>所在省份：<select name="select">
+        <option value="11">北京</option>
+        <option value="12">天津</option>
+        <option value="13">河北</option>
+        <option value="14">山西</option>
+        <option value="15">内蒙古</option>
+        <option value="21">辽宁</option>
+        <option value="22">吉林</option>
+        <option value="23">黑龙江</option>
+        <option value="31">上海</option>
+        <option value="32">江苏</option>
+        <option value="33">浙江</option>
+        <option value="34">安徽</option>
+        <option value="35">福建</option>
+        <option value="36">江西</option>
+        <option value="37">山东</option>
+        <option value="41">河南</option>
+        <option value="42">湖北</option>
+    </select>
+    </p>
+    <p>上传文件名称：
+        <input type="file" name="file">
+        <input type="submit" name="Submit" value="上传文件">
+    </p>
+    <p>
+        <input type="submit" name="submit" value="提交">
+        <input type="reset" name="reset" value="重新输入">
+    </p>
+</form>
+</body>
+</html>

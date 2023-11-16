@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>改变页面背景颜色</title>
+  <script language="JavaScript">
+    document.bgColor="blue";
+    document.vlinkColor="white";
+    document.linkColor="yellow";
+    document.alinkColor="red";
+
+    function changecolor() {
+      document.bgColor="red";
+    }
+    function changecolor1() {
+      document.bgColor="blue";
+    }
+  </script>
+</head>
+<body bgcolor="white">
+<form>
+  <input type="button" value="red" onclick="changecolor()">
+  <input type="button" value="blue" onclick="changecolor1()">
+</form>
+</body>
+</html>

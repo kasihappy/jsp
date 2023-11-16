@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>窗口方法演示程序</title>、
+    <script>
+        var newWindow = null;
+        function windowOpen() {
+            if (!newWindow || newWindow.closed) {
+                newWindow = window.open("", "win01","menubar=no, toolbar=no, resizable, scrollbars, width=400, height=280");
+            } else {
+              newWindow.focus();
+            }
+            newWindow.document.write("<head><title>新窗口开业了</title></head>");
+            newWindow.document.write("这是我开的窗口");
+        }
+        function OkWindow() {
+            newWindow.document.write("这是一个OK窗口");
+        }
+        function OkcancelWindow() {
+            confirm("这是一个OK/Cancel窗口");
+        }
+        function inputWindow() {
+            var input = window.prompt("请输入数据：");
+            newWindow = window.open("", "win01","menubar=no, toolbar=no, resizable, scrollbars, width=400, height=280");
+            newWindow.document.write("你刚刚输入的内容是： "+input);
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="../resources/css/defaultPage.css" type="text/css">
+<body>
+<h2>窗口方法的示例程序</h2>
+<p><a href="index.html">返回</a></p>
+
+<hr>
+<form>
+    <p><input   type="button"
+                onclick="windowOpen()"
+                value="打开新窗口"></p>
+    <p><input   type="button"
+                onclick="OkWindow()"
+                value="打开OK窗口"></p>
+    <p><input   type="button"
+                onclick="OkcancelWindow()"
+                value="打开OK/Cancel窗口"></p>
+    <p><input   type="button"
+                onclick="inputWindow()"
+                value="打开输入窗口"></p>
+</form>
+</body>
+</html>

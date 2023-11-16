@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>获取页面信息</title>
+</head>
+<body bgcolor="white">
+<form name="first">
+  请输入数据
+  <input type="text" name="text1" value="">
+</form>
+<a name="link1" href="lianxi1.htm">链接到第一个文本</a><br>
+<a name="link2" href="lianxi2.htm">链接到第二个文本</a><br>
+<a name="link3" href="lianxi3.htm">链接到第三个文本</a><br>
+<a href="#link1">第一锚点</a>
+<a href="#link2">第二锚点</a>
+<a href="#link3">第三锚点</a><br>
+
+<script>
+  document.write("<p><p>文档有"+document.links.length+"个连接<br>");
+  document.write("<p><p>文档有"+document.anchors.length+"个锚点<br>");
+  document.write("<p><p>文档有"+document.forms.length+"个表单<br>");
+</script>
+<p><a href="index.html">返回</a></p>
+</body>
+</html>

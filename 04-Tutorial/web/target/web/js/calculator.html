@@ -1,10 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JavaScript - 简易计算器</title>
+    <script language="JavaScript">
+        function calculate(f) {
+            if (f.symbol.value == "one") {
+                var x = parseInt(f.a1.value);
+                var y = parseInt(f.a2.value);
+                f.a3.value=((x+y));
+            }
+            else if (f.symbol.value == "two") {
+                var x = parseInt(f.a1.value);
+                var y = parseInt(f.a2.value);
+                f.a3.value=((x-y));
+            }
+            else if (f.symbol.value == "three") {
+                var x = parseInt(f.a1.value);
+                var y = parseInt(f.a2.value);
+                f.a3.value=((x*y));
+            }
+            else if (f.symbol.value == "four") {
+                var x = parseInt(f.a1.value);
+                var y = parseInt(f.a2.value);
+                f.a3.value=((x/y));
+            }
+            if (f.a3.value == "Infinity")
+                f.a3.value = "error"
+        }
+    </script>
 </head>
+<link rel="stylesheet"
+      href="../resources/css/defaultPage.css"
+      type="text/css">
 <body>
-
+<br>
+<p align="center">
+    <img border="0" src="../resources/images/1.gif">
+</p>
+<h2>简易计算器</h2>
+<p>
+    <a href="index.html">返回</a>
+</p>
+<hr>
+<form>
+    <input name="a1">
+    <select name="symbol">
+        <option selected value="one">+</option>
+        <option value="two">-</option>
+        <option value="three">*</option>
+        <option value="four">/</option>
+    </select>
+    <input name="a2">
+    <input type="button" value="=" onclick="calculate(form)">
+    <input name="a3">
+    <input type="reset" name="r1" value="c">
+</form>
 </body>
 </html>

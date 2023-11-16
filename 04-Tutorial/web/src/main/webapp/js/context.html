@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JavaScript - 演示时间示例程序</title>
+    <script language="JavaScript">
+        function input() {
+            document.write("<script language='JavaScript'>");
+            document.write("function copy(){ var string = myform.str1.value; myform.str2.value=string;}");
+            document.write("<\/script>");
+            document.write("<form name=\"myform\">");
+            document.write("<p><input type='button' value='开始输入' onclick='input()'>");
+            document.write("<p>输入内容<input type='text' name='str1' size='20'>");
+            document.write("<p><input type='button' value='开始复制' onclick='copy()'>");
+            document.write("<p>复制内容<input type='text' name='str2' size='20'>");
+            document.write("</form>")
+            document.write("<p><a href='index.html'> 返回</a></p>")
+        }
+    </script>
 </head>
+<link rel="stylesheet"
+      href="../resources/css/defaultPage.css"
+      type="text/css">
 <body>
-
+<br>
+<p align="center">
+    <img border="0" src="../resources/images/1.gif">
+</p>
+<h2>使用document对象建立动态输入环境</h2>
+<p>
+    <a href="index.html">返回</a>
+</p>
+<hr>
+<form name="myform">
+    <input type="button" value="开始输入" onclick="input()">
+</form>
 </body>
 </html>

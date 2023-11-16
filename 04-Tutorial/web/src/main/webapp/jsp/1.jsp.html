@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>源代码</title>
+</head>
+<body>
+<pre>
+&lt;%@ page contentType="text/html;charset=UTF-8"%>
+&lt;html>
+&lt;head>
+    &lt;title>测试JSP注释&lt;/title>
+&lt;/head>
+&lt;body>
+&lt;p>&lt;h1>显式注释
+    &lt;!--这是一个例子-->
+&lt;p>表达式注释
+    &lt;!--当前时间为:&lt;%=(new java.util.Date().toLocaleString())%>-->
+&lt;p>隐藏注释
+&lt;%--这是隐藏注释--%>
+&lt;/h1>
+&lt;/body>
+&lt;/html>
+
+</pre>
+</body>
+</html>
