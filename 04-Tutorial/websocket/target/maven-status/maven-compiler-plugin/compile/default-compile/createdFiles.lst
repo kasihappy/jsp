@@ -1,0 +1,6 @@
+org\kasihappy\Tutorial\websocket\TutorialConfig.class
+org\kasihappy\Tutorial\websocket\echo\EchoEndpoint$1.class
+org\kasihappy\Tutorial\websocket\echo\EchoEndpoint.class
+org\kasihappy\Tutorial\websocket\echo\EchoAnnotation.class
+org\kasihappy\Tutorial\websocket\echo\EchoEndpoint$EchoMessageHandlerText.class
+org\kasihappy\Tutorial\websocket\echo\EchoStreamAnnotation.class

@@ -1,61 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.kasihappy.Tutorial.AppTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.kasihappy.Tutorial.AppTest" time="0.01" tests="1" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="17"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\17143\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="user.timezone" value="Asia/Hong_Kong"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="17"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.4\bin"/>
-    <property name="sun.java.command" value="C:\Users\17143\AppData\Local\Temp\surefire6259390201077325094\surefirebooter-20231109175444662_6.jar C:\Users\17143\AppData\Local\Temp\surefire6259390201077325094 2023-11-09T17-54-43_628-jvmRun1 surefire-20231109175444662_4tmp surefire_1-20231109175444662_5tmp"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_361\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\17143\AppData\Local\Temp\surefire5594311488905113242\surefirebooter-20231207220513276_6.jar C:\Users\17143\AppData\Local\Temp\surefire5594311488905113242 2023-12-07T22-05-11_992-jvmRun1 surefire-20231207220513276_4tmp surefire_1-20231207220513276_5tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\test-classes;C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake\target\classes;C:\Users\17143\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\17143\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\17143"/>
     <property name="user.language" value="zh"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2022-07-19"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.4"/>
-    <property name="file.separator" value="\"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_361\jre"/>
     <property name="basedir" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\17143\AppData\Local\Temp\surefire6259390201077325094\surefirebooter-20231109175444662_6.jar"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\17143\AppData\Local\Temp\surefire5594311488905113242\surefirebooter-20231207220513276_6.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_361\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_361\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_361\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_361\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_361\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_361\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_361\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.4+11-LTS-179"/>
+    <property name="java.runtime.version" value="1.8.0_361-b09"/>
     <property name="user.name" value="17143"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_361\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="GBK"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\17143\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\17143\AppData\Local\Temp\"/>
     <property name="idea.version" value="2023.2.2"/>
-    <property name="java.version" value="17.0.4"/>
+    <property name="java.version" value="1.8.0_361"/>
     <property name="user.dir" value="C:\Users\17143\Desktop\jsp\04-Tutorial\java\snake"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="native.encoding" value="GBK"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.4\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\libnvvp;C:\Program Files\Java\jdk1.8.0_361\bin;C:\Program Files\Java\jdk1.8.0_361\jre\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2023.1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Graphviz\bin;C:\HashiCorp\Vagrant\bin;C:\Windows\System32\WindowsPowerShell\v1.0;C:\javaTools\apache-ant-1.10.14\bin;C:\javaTools\apache-maven-3.6.0\bin;C:\javaTools\Tomcat 9.0\lib;C:\javaTools\Tomcat 9.0\bin;C:\javaTools\db-derby-10.12.1.1-bin\bin;C:\javaTools\nodejs\;C:\javaTools\nodejs\node_modules;C:\Users\17143\anaconda3;C:\Users\17143\anaconda3\Library\bin;C:\Users\17143\anaconda3\Scripts;C:\Users\17143\AppData\Local\Microsoft\WindowsApps;C:\Users\17143\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\17143\AppData\Local\Programs\Fiddler;C:\phpstudy_pro\Extensions\php\php7.3.4nts;C:\phpStudy\PHPTutorial\php\php-5.4.45;C:\Program Files\Git\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Graphviz\bin;C:\WINDOWS\system32;C:\WINDOWS\System32\OpenSSH\;C:\javaTools\apache-ant-1.10.14\bin;C:\javaTools\apache-maven-3.6.0\bin;C:\javaTools\IntelliJ IDEA Community Edition 2023.2.2\bin;;C:\javaTools\nodejs\node_global;;C:\javaTools\IntelliJ IDEA 2023.2.2\bin;;C:\Program Files\JetBrains\PhpStorm 2023.2.2\bin;;C:\Program Files\JetBrains\PyCharm 2023.2.3\bin;;."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_361\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\libnvvp;C:\Program Files\Java\jdk1.8.0_361\bin;C:\Program Files\Java\jdk1.8.0_361\jre\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2023.1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Graphviz\bin;C:\HashiCorp\Vagrant\bin;C:\Windows\System32\WindowsPowerShell\v1.0;C:\javaTools\apache-ant-1.10.14\bin;C:\javaTools\apache-maven-3.6.0\bin;C:\javaTools\Tomcat 9.0\lib;C:\javaTools\Tomcat 9.0\bin;C:\javaTools\db-derby-10.12.1.1-bin\bin;C:\javaTools\nodejs\;C:\javaTools\nodejs\node_modules;C:\Users\17143\anaconda3;C:\Users\17143\anaconda3\Library\bin;C:\Users\17143\anaconda3\Scripts;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\SCIPOptSuite 8.1.0\bin;C:\Program Files\SCIPOptSuite 8.1.0\include;C:\Program Files\SCIPOptSuite 8.1.0\lib;C:\Users\17143\AppData\Local\Microsoft\WindowsApps;C:\Users\17143\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\17143\AppData\Local\Programs\Fiddler;C:\phpstudy_pro\Extensions\php\php7.3.4nts;C:\phpStudy\PHPTutorial\php\php-5.4.45;C:\Program Files\Git\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Graphviz\bin;C:\WINDOWS\system32;C:\WINDOWS\System32\OpenSSH\;C:\javaTools\apache-ant-1.10.14\bin;C:\javaTools\apache-maven-3.6.0\bin;C:\javaTools\IntelliJ IDEA Community Edition 2023.2.2\bin;;C:\javaTools\nodejs\node_global;C:\javaTools\IntelliJ IDEA 2023.2.2\bin;;C:\Program Files\JetBrains\PhpStorm 2023.2.2\bin;;C:\Program Files\JetBrains\PyCharm 2023.2.3\bin;;C:\iverilog\bin;C:\iverilog\gtkwave\bin;C:\Program Files\SCIPOptSuite 8.1.0\bin;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="17.0.4+11-LTS-179"/>
+    <property name="java.vm.version" value="25.361-b09"/>
+    <property name="java.specification.maintenance.version" value="4"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_361\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="61.0"/>
+    <property name="java.class.version" value="52.0"/>
   </properties>
   <testcase name="testApp" classname="org.kasihappy.Tutorial.AppTest" time="0.001"/>
 </testsuite>

@@ -11,7 +11,20 @@
   <artifactId>web</artifactId>
   <packaging>war</packaging>
   <name>web</name>
-  <build>
+    <dependencies>
+      <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>tomcat-jsp-api</artifactId>
+          <version>7.0.47</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.2</version>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+    <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>

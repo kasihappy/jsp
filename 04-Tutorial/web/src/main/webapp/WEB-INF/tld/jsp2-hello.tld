@@ -1,0 +1,11 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>1.1</jsp-version>
+    <short-name>SimpleTagLibrary</short-name>
+    <uri>http://tomcat.apache.org/jsp2-example-taglib</uri>
+    <tag>
+        <name>hello</name>
+        <tag-class>org.kasihappy.Tutorial.web.taglib.HelloWorld2</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

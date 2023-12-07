@@ -4,4 +4,8 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <taglib>
+    <taglib-uri>/URLhello</taglib-uri>
+    <taglib-location>/WEB-INF/tld/hello.tld</taglib-location>
+  </taglib>
 </web-app>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WebSocket 示例： echo</title>
+    <style type="text/css">
+        <![CDATA[
+        #connect-container {
+            float: left;
+            width: 400px;
+        }
+        #connect-container div {
+            padding: 5px;
+        }
+        #console-container {
+            float: left;
+            margin-left: 15px;
+            width: 400px;
+        }
+        #console {
+            border: 1px solid #CCCCCC;
+            border-right-color: #999999;
+            border-bottom-color: #999999;
+            height: 170px;
+            overflow-y: scroll;
+            padding: 5px;
+            width: 100%;
+        }
+        #console p {
+            padding: 0;
+            margin: 0;
+        }
+        ]]>
+    </style>
+    <script>
+        <![CDATA[
+            "use strict";
+            var ws = null;
+            /*设置页面组件激活状态【内部】*/
+            function setConnected(connected) {
+                document.getElementById('connect').disabled = connected;
+                document.getElementById('disconnect').disabled = !connected;
+                document.getElementById('echo').disabled = !connected;
+            }
+            /*在控制区域输出消息【内部】*/
+            function log(message) {
+                /*获取控制台*/
+                var console = document.getElementById('console');
+                /*动态建立新文档段*/
+                var p = document.createElement('p');
+                p.style.wordWrap = 'break-word';
+                p.appendChild(document.createTextNode(message));
+                /*新建文档段加入console中*/
+                console.appendChild(p);
+                /*设置console内容滚动*/
+                while (console.childNodes.length > 25) {
+                    console.removeChild(console.firstChild);
+                }
+                console.scrollTop = console.scrollHeight;
+            }
+            /*与后端服务端建立连接【对应（连接）按钮】*/
+            function connect() {
+                /*与服务器后端建立连接*/
+                var target = document.getElementById('target').value;
+                if (target == '') {
+                    alert('请选择服务器端连接方式。');
+                    return;
+                }
+                /*依据浏览器支持WebSocket情况，建立连接*/
+                if ('WebSocket' in window) {
+                    /*【关注】建立连接*/
+                    ws = new WebSocket(target);
+                } else if ('MozWebSocket' in window) {
+                    /*【关注】建立连接*/
+                    ws = new WebSocket(target);
+                } else {
+                    alert('当前浏览器不支持Websocket。');
+                    return;
+                }
+                /*声明onopen方法*/
+                ws.onopen = function () {
+                    /*已建立连接，设置页面组件状态*/
+                    setConnected(true);
+                    log('信息：WebSocket连接已打开');
+                };
+                /*声明onclose方法*/
+                ws.onclose = function (event) {
+                    /*已断开连接，设置页面组件状态*/
+                    setConnected(false);
+                    log('信息：WebSocket connection closed, Code: ' +
+                        event.code + (event.reason == "" ? "" : ", Reason: " +
+                        event.reason));
+                };
+            }
+            /*关闭与后端服务端的连接【对应（关闭）】*/
+            function disconnect() {
+                if (ws != null) {
+                    /*【关注】关闭服务器连接*/
+                    ws.close();
+                    ws = null;
+                }
+                /*设置页面组件状态*/
+                setConnected(false);
+            }
+            /*向服务器发送消息【对应（回显消息）按钮】*/
+            function echo() {
+                if (ws != null) {
+                    var message = document.getElementById('message').value;
+                    log('Sent: '+message);
+                    /*【关注】向服务器段发送消息*/
+                    ws.send(message);
+                } else {
+                    alert('WebSocket目前未连接，请连接后操作。');
+                }
+            }
+            /*更新ws/wss连接串【对应（radio）选项】*/
+            function updateTarget(target) {
+                if (window.location.protocol == 'http:') {
+                    document.getElementById('target').value = 'ws://' +
+                        window.location.host + target;
+                } else {
+                    document.getElementById('target').value = 'wss://' +
+                        window.location.host + target;
+                }
+            }
+            /*设置文档内容装载监听事件，取出<noscript>元素*/
+            document.addEventListener("DOMContentLoaded",
+            function () {
+                /*删除"noscript" class元素，在XHTML中不支持该标签*/
+                var noscripts = document.getElementsByClassName("noscript");
+                for (var i = 0; i < noscripts.length; i++) {
+                    noscripts[i].parentNode.removeChild(noscripts[i]);
+                }
+            }, false);
+        ]]>
+    </script>
+</head>
+<body>
+<!--css样式-->
+<link rel="stylesheet"
+      href="resources/css/defaultPage.css"
+      type="text/css"/>
+<!--页头图像-->
+<div>
+    <p align="center"><img border="0" src="resources/images/banner.gif"/></p>
+    <h2>JSP-websocket</h2>
+    <p><a href="index.html">返回</a></p>
+    <hr/>
+</div>
+<!--提醒激活浏览器JavaScript显示信息-->
+<div class="noscript">
+    <h2 style="color: #ff0000">Websocket 依赖于激活的JavaScript。
+        请激活JavaScript后，再浏览本页面</h2>
+</div>
+<!--连接图层-->
+<div>
+    <div id="connect-container">
+        <!--选择服务器端连接方式图层-->
+        <div>
+            <span>请选择连接WebSocket服务的方式：</span>
+            <br/>
+            <!--使用服务器端新的programmatic api运行echo示例-->
+            <input id="radio1"
+                   type="radio"
+                   name="group1"
+                   value="/websocket/websocket/echoProgrammatic"
+                   onclick="updateTarget(this.value);"/>
+            <label for="radio1">编程方式 api</label>
+            <br/>
+            <!--使用服务器端新的annotation api(basic)运行echo示例-->
+            <input id="radio2"
+                   type="radio"
+                   name="group1"
+                   value="/websocket/websocket/echoAnnotation"
+                   onclick="updateTarget(this.value);"/>
+            <label for="radio2">注解方式 api</label>
+            <br/>
+            <!--使用服务器端新的annotation api(stream)运行echo示例-->
+            <input id="radio3"
+                   type="radio"
+                   name="group1"
+                   value="/websocket/websocket/echoStreamAnnotation"
+                   onclick="updateTarget(this.value);"/>
+            <label for="radio3">注解方式 api(Stream)</label>
+            <br/>
+        </div>
+        <!--target 显示区域-->
+        <div>
+            <input id="target"
+                   type="text"
+                   size="40"
+                   style="width: 350px"/>
+        </div>
+        <!--连接操作按钮区域-->
+        <div>
+            <button id="connect" onclick="connect();">连接</button>
+            <button id="disconnect" disabled="disabled" onclick="disconnect();">关闭</button>
+        </div>
+        <!--message消息区域-->
+        <div>
+            <textarea id="message" style="width: 350px">这是一条示例消息</textarea>
+        </div>
+        <!--echo 按钮-->
+        <div>
+            <button id="echo" onclick="echo();" disabled="disabled">回显消息</button>
+        </div>
+    </div>
+    <!--console显示区-->
+    <div id="console-container">
+        <div id="console"/>
+    </div>
+</div>
+</body>
+</html>

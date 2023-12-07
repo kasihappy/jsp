@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.kasihappy.Tutorial</groupId>
+        <artifactId>Tutorial</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>org.kasihappy.Tutorial</groupId>
+    <artifactId>websocket</artifactId>
+    <packaging>war</packaging>
+    <name>websocket</name>
+    <dependencies>
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-logging-juli</artifactId>
+            <version>8.0.23</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!--URL, 注意 text-->
+                    <url>http://localhost:8080/manager/text</url>
+                    <!--此处名称是C:\javaTools\apache-maven-3.6.0\conf\settings.xml中的server-->
+                    <server>tomcatServer</server>
+                    <!--此处名称是应用名称 /(war文件名称)-->
+                    <path>/websocket</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

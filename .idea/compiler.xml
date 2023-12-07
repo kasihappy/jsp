@@ -9,6 +9,7 @@
         <module name="snake" />
         <module name="prime" />
         <module name="web" />
+        <module name="websocket" />
         <module name="network" />
       </profile>
     </annotationProcessing>
@@ -27,6 +28,8 @@
       <module name="prime" options="-Xlint:unchecked" />
       <module name="prime (1)" options="-Xlint:unchecked" />
       <module name="snake" options="-Xlint:unchecked" />
+      <module name="web" options="-Xlint:unchecked" />
+      <module name="websocket" options="-Xlint:unchecked" />
     </option>
   </component>
 </project>
